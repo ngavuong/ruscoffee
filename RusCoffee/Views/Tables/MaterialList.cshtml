@@ -1,0 +1,155 @@
+﻿
+@{
+    ViewData["Title"] = "Quản lý nhập kho";
+}
+<link href="~/lib/jquery-ui/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+<div class="row wrapper border-bottom white-bg">
+    <div class="col-lg-10">
+        <h2>Quản lý nhập kho</h2>
+    </div>
+    <div class="col-lg-2 d-flex" style="align-items:center">
+        <a data-toggle="modal" href="#material-form" class="btn btn-sm btn-primary float-right m-t-n-xs ml-2" id="create-import">Thêm phiếu nhập</a>
+        @*<button class="btn btn-sm btn-primary m-t-n-xs ml-1" style="height:40px" ></button>*@
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row search">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <div style="display:flex">
+                        <div class="form-group d-flex mr-2 data_1">
+                            <label class="font-normal" style="width:100px">Từ ngày</label>
+                            <div class="input-group date">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control datepicker" id="fromDate">
+                            </div>
+                        </div>
+                        <div class="form-group d-flex data_1">
+                            <label class="font-normal" style="width:100px">Đến ngày</label>
+                            <div class="input-group date">
+
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control datepicker" id="toDate">
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-primary m-t-n-xs ml-1" style="height:40px" id="reload">Tìm</button>
+                    </div>
+
+                </div>
+                <div class="ibox-content">
+
+                    <table class="table" id="grdImport">
+                        <thead>
+                            <tr>
+                                <th format="Date" fieldName="ImportDate">Ngày nhập</th>
+                                <th fieldName="EmployeeName">Tên nhân viên</th>
+                                <th fieldName="EmployeeCode">Mã nhân viên</th>
+                                <th format="Money" fieldName="TotalAmount">Tổng tiền</th>
+                                <th format="Action"></th>
+                            </tr>
+                        </thead>
+                        <tbody st>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>
+                                    <span>Trang</span>
+                                    <input type="number" value="1" style="width:50px" id="pageNumber" />
+                                    <span>Trên </span>
+                                    <span id="totalPage"></span>
+                                    <span style="margin-left:20px">/ Tổng</span>
+                                    <span id="totalRow"></span>
+                                    <span>phiếu nhập</span>
+                                </td>
+                                <td colspan="5" class="footable-visible">
+                                    <ul class="pagination float-right">
+                                        <li class="footable-page-arrow"><a data-page="first" href="#" id="firstPage">«</a></li>
+                                        <li class="footable-page-arrow"><a data-page="prev" href="#" id="prevPage">‹</a></li>
+
+                                        <li class="footable-page-arrow"><a data-page="next" href="#" id="nextPage">›</a></li>
+                                        <li class="footable-page-arrow"><a data-page="last" href="#" id="lastPage">»</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @*Form hóa đơn*@
+    <div id="material-form" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3 class="m-t-none m-b">Phiếu nhập kho</h3>
+                            <form role="form">
+                                <div class="form-group d-flex"><label style="width:150px">Số phiếu:</label> <input type="text" field="ImportNumber" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0" notEmpty></div>
+                                <div class="form-group d-flex"><label style="width:150px">Ngày nhập:</label> <input type="text" field="ImportDate" class="form-control datepicker" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                <div class="form-group d-flex"><label style="width:150px">Mã nhân viên:</label> <input type="text" field="EmployeeCode" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0" notEmpty></div>
+                                <div class="form-group d-flex"><label style="width:150px">Tên nhân viên:</label> <input type="text" field="EmployeeName" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0" notEmpty></div>
+                                <div class="form-group" id="grdImportDetail">
+                                    <table class="table" style="border:1px solid #c0c0c0" id="materialDetail">
+                                        <thead>
+                                            <tr>
+                                                <th fieldName="MaterialName" width="150px">Tên nguyên liệu</th>
+                                                <th fieldName="Quantity" width="70px">SL</th>
+                                                <th fieldName="UnitName" title="Đơn vị tính" width="70px">ĐV tính</th>
+                                                <th fieldName="Amount" format="Money" width="120px">Tiền nhập</th>
+                                                <th format="ActionDetail"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @*<tr>
+                                                <td><input class="material-input" /></td>
+                                                <td><input class="material-input" /></td>
+                                                <td><input class="material-input" /></td>
+                                                <td><input class="material-input" /></td>
+                                                <td><a href="#" class="btn btn-sm btn-danger float-right m-t-n-xs ml-2 deleteRow">Xóa</a>
+                                            </tr>*@
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="5" class="footable-visible">
+                                                    <ul class="pagination float-right">
+                                                        <li class="footable-page-arrow "><input type="button" class="btn btn-sm btn-success float-right m-t-n-xs ml-2 addRow" value="Thêm dòng"></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+
+                                <div class="form-group d-flex"><label style="width:150px">Tổng tiền:</label> <input type="text" field="TotalAmount" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                <div>
+                                    <a class="btn btn-sm btn-danger float-right m-t-n-xs ml-1 closeBtn" style="color:#fff" data-dismiss="modal"><strong>Đóng</strong></a>
+                                    <a class="btn btn-sm btn-primary float-right m-t-n-xs ml-1" style="color:#fff" id="saveImport"><strong>Lưu</strong></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Styles {
+    <link href="~/css/ruscoffee.css" rel="stylesheet" />
+}
+
+
+@section Scripts {
+
+    <script src="~/Scripts/libraries/jquery-3.4.1.min.js"></script>
+    <script src="~/lib/jquery-ui/jquery-ui.js"></script>
+    <script src="~/Scripts/base/base.js"></script>
+    <script src="~/Scripts/common/common.js"></script>
+    <script src="~/Scripts/base/ajax.js"></script>
+    <script type="text/javascript">
+    var oUsers = @Json.Serialize(ViewBag.UserList);
+    </script>
+    <script src="~/Scripts/views/Import/MaterialList.js"></script>
+}

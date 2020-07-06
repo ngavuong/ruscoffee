@@ -1,0 +1,8 @@
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\ASPNET_Core_2_1\obj\Debug\netcoreapp3.1\ASPNET_Core_2_1.csprojAssemblyReference.cache
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\ASPNET_Core_2_1\obj\Debug\netcoreapp3.1\ASPNET_Core_2_1.MvcApplicationPartsAssemblyInfo.cache
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\ASPNET_Core_2_1\obj\Debug\netcoreapp3.1\ASPNET_Core_2_1.AssemblyInfoInputs.cache
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\ASPNET_Core_2_1\obj\Debug\netcoreapp3.1\ASPNET_Core_2_1.AssemblyInfo.cs
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\ASPNET_Core_2_1\obj\Debug\netcoreapp3.1\ASPNET_Core_2_1.TagHelpers.input.cache
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\ASPNET_Core_2_1\obj\Debug\netcoreapp3.1\ASPNET_Core_2_1.TagHelpers.output.cache
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\ASPNET_Core_2_1\obj\Debug\netcoreapp3.1\ASPNET_Core_2_1.dll
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\ASPNET_Core_2_1\obj\Debug\netcoreapp3.1\ASPNET_Core_2_1.pdb

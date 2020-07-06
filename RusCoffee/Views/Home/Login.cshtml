@@ -1,0 +1,68 @@
+﻿@using RusCoffee.Entities;
+@model AuthenticateModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RusCoffee | Đăng nhập</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    </environment>
+
+
+</head>
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div>
+            <div style="margin-left:-220px;">
+
+                <h1 class="logo-name">RusCoffee</h1>
+
+            </div>
+            <h3>Welcome to RusCoffee</h3>
+            <form class="m-t" role="form" asp-action="Login" asp-controller="Home" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Username" required="" asp-for="Username">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" required="" asp-for="Password">
+                </div>
+                <button class="btn btn-primary block full-width m-b" type="submit">Login</button>
+
+                <a href="#"><small>Forgot password?</small></a>
+                <p class="text-muted text-center"><small>Do not have an account?</small></p>
+                <a class="btn btn-sm btn-white btn-block" href="@Url.Action(" Register", "Pages" )">Create an account</a>
+            </form>
+            <p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2015</small> </p>
+        </div>
+    </div>
+
+    @*<script src="~/Scripts/views/dictionary/index.js"></script>*@
+</body>
+</html>
+
+<script src="~/Scripts/libraries/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/views/dictionary/index.js"></script>
+@if (ViewBag.Error == true)
+{
+    <script type="text/javascript">
+        alert('Tài khoản hoặc mật khẩu chưa đúng. Vui lòng kiểm tra lại!');
+    </script>
+}

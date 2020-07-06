@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewData["Title"] = "Danh sách nhân viên";
+}
+<link href="~/lib/jquery-ui/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+<div class="row wrapper border-bottom white-bg">
+    <div class="col-lg-10">
+        <h2>Danh sách nhân viên</h2>
+    </div>
+    <div class="col-lg-2 d-flex" style="align-items:center">
+        <a data-toggle="modal" href="#employee-form" class="btn btn-sm btn-primary float-right m-t-n-xs ml-2" id="create-employee">Thêm nhân viên</a>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row search">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <div style="display:flex">
+                        <div class="form-group d-flex data_1">
+                            <label class="font-normal" style="width:100px">Tên NV</label>
+                            <div class="input-group date">
+                                <input type="text" class="form-control" id="employeeNameSearch">
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-primary m-t-n-xs ml-1" style="height:40px" id="reload">Tìm</button>
+                    </div>
+
+                </div>
+                <div class="ibox-content">
+
+                    <table class="table" id="grdEmployee">
+                        <thead>
+                            <tr>
+                                <th fieldName="FullName">Tên nhân viên</th>
+                                <th fieldName="UserCode">Mã nhân viên</th>
+                                <th format="Date" fieldName="Birthday">Ngày hóa đơn</th>
+                                <th fieldName="Email">Email</th>
+                                <th fieldName="Gender">Giới tính</th>
+                                <th fieldName="Username">Tên đăng nhập</th>
+                                <th format="Action"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                        @*<tfoot>
+                            <tr>
+                                <td>
+                                    <span>Trang</span>
+                                    <input type="number" value="1" style="width:50px" id="pageNumber" />
+                                    <span>Trên </span>
+                                    <span id="totalPage"></span>
+                                    <span style="margin-left:20px">/Tổng</span>
+                                    <span id="totalRow"></span>
+                                    <span>nhân viên</span>
+                                </td>
+                                <td colspan="5" class="footable-visible">
+                                    <ul class="pagination float-right">
+                                        <li class="footable-page-arrow"><a data-page="first" href="#" id="firstPage">«</a></li>
+                                        <li class="footable-page-arrow"><a data-page="prev" href="#" id="prevPage">‹</a></li>
+
+                                        <li class="footable-page-arrow"><a data-page="next" href="#" id="nextPage">›</a></li>
+                                        <li class="footable-page-arrow"><a data-page="last" href="#" id="lastPage">»</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tfoot>*@
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @*Form hóa đơn*@
+    <div id="employee-form" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3 class="m-t-none m-b">Thông tin nhân viên</h3>
+                            <form role="form">
+                                <div class="form-group d-flex"><label style="width:150px">Mã NV:</label> <input type="text" fieldName="UserCode" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0;text-transform:uppercase" notEmpty ></div>
+                                <div class="form-group d-flex"><label style="width:150px">Tên NV:</label> <input type="text" fieldName="FullName" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0" notEmpty></div>
+                                <div class="form-group d-flex"><label style="width:150px">Ngày sinh:</label> <input type="text" fieldName="Birthday" class="form-control datepicker" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                <div class="form-group d-flex"><label style="width:110px">Giới tính:</label> <select fieldName="Gender" id="gender">
+                                    <option value="0" selected>Nữ</option>
+                                    <option value="1">Nam</option>
+                                    </select>
+                                </div>
+                                <div class="form-group d-flex"><label style="width:150px">Địa chỉ:</label> <input type="text" fieldName="Address" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                <div class="form-group d-flex"><label style="width:150px">Email:</label> <input type="text" fieldName="Email" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                <div class="form-group d-flex"><label style="width:150px">Số điện thoai:</label> <input type="text" fieldName="Phone" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                <div class="form-group d-flex"><label style="width:150px">Ngày vào làm:</label> <input type="text" fieldName="StartWorkDate" class="form-control datepicker" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                <div class="form-group d-flex"><label style="width:150px">Tài khoản:</label> <input type="text" fieldName="Username" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0" notEmpty></div>
+                                <div id="Password" class="form-group d-flex"><label style="width:150px">Mật khẩu:</label> <input type="password" fieldName="Password" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0" notEmpty></div>
+                                <div id="RePassword" class="form-group d-flex"><label style="width:150px">Nhập lại MK:</label> <input type="password" fieldName="RePassword" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0" notEmpty></div>
+                                <div>
+                                    <a class="btn btn-sm btn-danger float-right m-t-n-xs ml-1 closeBtn" data-dismiss="modal"><strong>Đóng</strong></a>
+                                    <a class="btn btn-sm btn-primary float-right m-t-n-xs ml-1 saveEmployee"><strong>Lưu</strong></a>
+                                    @*<label> <input type="checkbox" class="i-checks"> Remember me </label>*@
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Styles {
+
+}
+
+
+@section Scripts {
+
+    <script src="~/Scripts/libraries/jquery-3.4.1.min.js"></script>
+    <script src="~/lib/jquery-ui/jquery-ui.js"></script>
+    <script src="~/Scripts/base/base.js"></script>
+    <script src="~/Scripts/common/common.js"></script>
+    <script src="~/Scripts/base/ajax.js"></script>
+    <script type="text/javascript">
+    </script>
+    <script src="~/Scripts/views/EmployeeList.js"></script>
+    @*<script type="text/javascript">
+            $(document).ready(function () {
+                $('.data_1 .input-group.date').datepicker({
+                    //todayBtn: "linked",
+                    //keyboardNavigation: false,
+                    //forceParse: false,
+                    //calendarWeeks: true,
+                    autoclose: true
+                });
+            })
+        </script>*@
+}

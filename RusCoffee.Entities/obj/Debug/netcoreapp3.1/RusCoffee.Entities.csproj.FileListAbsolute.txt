@@ -1,0 +1,8 @@
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.Entities\bin\Debug\netcoreapp3.1\RusCoffee.Entities.deps.json
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.Entities\bin\Debug\netcoreapp3.1\RusCoffee.Entities.dll
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.Entities\bin\Debug\netcoreapp3.1\RusCoffee.Entities.pdb
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.AssemblyInfoInputs.cache
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.AssemblyInfo.cs
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.dll
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.pdb
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.csprojAssemblyReference.cache

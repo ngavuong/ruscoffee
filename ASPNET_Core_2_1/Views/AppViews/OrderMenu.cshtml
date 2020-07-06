@@ -1,0 +1,203 @@
+﻿
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-9">
+        <h2><b>Menu</b></h2>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight" id="orderPage">
+    <div class="row">
+        <div class="col-lg-6" style="height:450px;overflow:auto;" id="grdMenu">
+            <div class="row">
+                <div class="col-lg-4" data-refID="abc">
+                    <div class="contact-box">
+                        <div class="row" @*href="@Url.Action("Profile", "AppViews")"*@>
+                            <div class="col-12">
+                                <div class="text-center">
+                                    <img alt="image" class="m-t-xs img-fluid" src="~/Images/landing/hot_coffee_latte_matcha.jpg">
+                                </div>
+                            </div>
+                            <div class="col-12 center w-100">
+                                <h5><b>Latte matcha nóng</b></h5>
+                                <h5>70,000 VND</h5>
+                                <button class="btn btn-sm btn-primary float-right m-t-n-xs btn-add-order"><strong>Thêm món</strong></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-box">
+                        <div class="row" @*href="@Url.Action("Profile", "AppViews")"*@>
+                            <div class="col-12">
+                                <div class="text-center">
+                                    <img alt="image" class="m-t-xs img-fluid" src="~/Images/landing/hot_coffee_latte_matcha.jpg">
+                                </div>
+                            </div>
+                            <div class="col-12 center w-100">
+                                <h5><b>Latte matcha nóng</b></h5>
+                                <h5>70,000 VND</h5>
+                                <button class="btn btn-sm btn-primary float-right m-t-n-xs btn-add-order"><strong>Thêm món</strong></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-box">
+                        <div class="row" @*href="@Url.Action("Profile", "AppViews")"*@>
+                            <div class="col-12">
+                                <div class="text-center">
+                                    <img alt="image" class="m-t-xs img-fluid" src="~/Images/landing/hot_coffee_latte_matcha.jpg">
+                                </div>
+                            </div>
+                            <div class="col-12 center w-100">
+                                <h5><b>Latte matcha nóng</b></h5>
+                                <h5>70,000 VND</h5>
+                                <button class="btn btn-sm btn-primary float-right m-t-n-xs btn-add-order"><strong>Thêm món</strong></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contact-box">
+                        <div class="row" @*href="@Url.Action("Profile", "AppViews")"*@>
+                            <div class="col-12">
+                                <div class="text-center">
+                                    <img alt="image" class="m-t-xs img-fluid" src="~/Images/landing/hot_coffee_latte_matcha.jpg">
+                                </div>
+                            </div>
+                            <div class="col-12 center w-100">
+                                <h5><b>Latte matcha nóng</b></h5>
+                                <h5>70,000 VND</h5>
+                                <button>Thêm món</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-box">
+                        <div class="row" @*href="@Url.Action("Profile", "AppViews")"*@>
+                            <div class="col-12">
+                                <div class="text-center">
+                                    <img alt="image" class="m-t-xs img-fluid" src="~/Images/landing/hot_coffee_latte_matcha.jpg">
+                                </div>
+                            </div>
+                            <div class="col-12 center w-100">
+                                <h5><b>Latte matcha nóng</b></h5>
+                                <h5>70,000 VND</h5>
+                                <button>Thêm món</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-box">
+                        <div class="row" @*href="@Url.Action("Profile", "AppViews")"*@>
+                            <div class="col-12">
+                                <div class="text-center">
+                                    <img alt="image" class="m-t-xs img-fluid" src="~/Images/landing/hot_coffee_latte_matcha.jpg">
+                                </div>
+                            </div>
+                            <div class="col-12 center w-100">
+                                <h5><b>Latte matcha nóng</b></h5>
+                                <h5>70,000 VND</h5>
+                                <button>Thêm món</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="menuUpdate">
+                <button class="btn btn-sm btn-success m-t-n-xs add-item"><strong>Thêm món mới</strong></button>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>
+                        <span>Bàn :  </span>
+                        <input type="number" value="1" style="border:none;width:40px;padding:5px;" />
+                    </h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <a href="#" class="dropdown-item">Config option 1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">Config option 2</a>
+                            </li>
+                        </ul>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th fieldName="ItemName">Tên món</th>
+                                <th fieldName="Quantity">Số lượng</th>
+                                <th fieldName="Amount">Thành tiền</th>
+                                <th fieldName="Action"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td><input type="number" style="border:none;width:40px;padding:5px" value="1" /></td>
+                                <td>mdo</td>
+                                <td>
+                                    <button class="btn btn-sm btn-danger float-right m-t-n-xs"><strong>Xóa</strong></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jacob</td>
+                                <td><input type="number" style="border:none;width:40px;padding:5px" value="1" /></td>
+                                <td>fat</td>
+                                <td>
+                                    <button class="btn btn-sm btn-danger float-right m-t-n-xs"><strong>Xóa</strong></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Larry</td>
+                                <td><input type="number" style="border:none;width:40px;padding:5px" value="1" /></td>
+                                <td>twitter</td>
+                                <td>
+                                    <button class="btn btn-sm btn-danger float-right m-t-n-xs"><strong>Xóa</strong></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <div class="navbar-bottom">
+                <button class="btn btn-sm btn-primary float-right m-t-n-xs"><strong>Thêm món</strong></button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="~/Scripts/views/Invoice/Order.js"></script>
+<script type="text/javascript">
+    alert(1)
+</script>

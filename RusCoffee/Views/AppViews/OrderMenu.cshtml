@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-9">
+        <h2><b>Menu</b></h2>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight" id="orderPage">
+    <div class="row">
+        <div class="col-lg-8"  id="grdMenu">
+            <div class="row">
+                @if (ViewBag.Data != null)
+                {
+                    @foreach (var item in ViewBag.Data)
+                    {
+                        <div class="col-lg-4" data-refID="abc">
+                            <div class="contact-box">
+                                <div class="row" @*href="@Url.Action("Profile", "AppViews")"*@>
+                                    <div class="col-12">
+                                        <div class="text-center">
+                                            <img alt="image" class="m-t-xs img-fluid" src="~/upload/@item.ImagePath">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 center w-100">
+                                        <h5><b>@item.ItemName</b></h5>
+                                        <h5>@item.UnitPrice</h5>
+                                        @*<button class="btn btn-sm btn-danger float-right m-t-n-xs ml-2 delete-item-btn" data-itemID=@item.ItemID><strong>Xóa</strong></button>
+                                        <a data-toggle="modal" class="btn btn-sm float-right m-t-n-xs btn btn-success ml-2 edit-item-btn" href="#item-form" data-itemID=@item.ItemID>Sửa</a>*@
+                                        <button class="btn btn-sm btn-primary float-right m-t-n-xs ml-2 btn-add-order" data-itemID=@item.ItemID><strong>Chọn</strong></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+
+            @*<div class="row" id="menuUpdate">
+                <a data-toggle="modal" class="btn btn-success" href="#item-form" id="create-item">Thêm món mới</a>
+            </div>*@
+        </div>
+
+        <div class="col-lg-4">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>
+                        <span>Bàn :  </span>
+                        <input type="number" id="tableNumber" value="1" style="border:none;width:40px;padding:5px;" />
+                    </h5>
+                </div>
+                <div class="ibox-content" id="grdOrderSelect">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th fieldName="ItemName">Tên món</th>
+                                <th fieldName="Quantity">Số lượng</th>
+                                <th fieldName="Amount">Thành tiền</th>
+                                <th fieldName="Action"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @*<tr>
+                                    <td>Larry</td>
+                                    <td><input type="number" style="border:none;width:40px;padding:5px" value="1" /></td>
+                                    <td>twitter</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-danger float-right m-t-n-xs"><strong>Xóa</strong></button>
+                                    </td>
+                                </tr>*@
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <div class="navbar-bottom">
+                @*<button class="btn btn-sm btn-primary float-right m-t-n-xs"><strong>Tạo hóa đơn</strong></button>*@
+                <div class="text-center">
+                    <a data-toggle="modal" class="btn btn-primary" href="#invoice-form" id="create-invoice">Tạo hóa đơn</a>
+                </div>
+
+                @*Tạo hóa đơn*@
+                <div id="invoice-form" class="modal fade" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3 class="m-t-none m-b">Lập hóa đơn</h3>
+                                        <form role="form">
+                                            <div class="form-group d-flex"><label style="width:150px">Tên nhân viên:</label> <input type="text" fieldName="EmployeeName" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                            <div class="form-group d-flex"><label style="width:150px">Mã nhân viên:</label> <input type="text" fieldName="EmployeeCode" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                            <div class="form-group d-flex"><label style="width:150px">Ngày hóa đơn:</label> <input type="text" fieldName="InvoiceDate" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                            <div id="invoiceDetail"></div>
+
+                                            <div class="form-group d-flex"><label style="width:150px">Tổng tiền thanh toán:</label> <input type="text" fieldName="TotalAmount" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                            <div>
+                                                <a class="btn btn-sm btn-danger float-right m-t-n-xs ml-1 closeBtn" data-dismiss="modal"><strong>Hủy bỏ</strong></a>
+                                                <input id="saveInvoice" class="btn btn-sm btn-primary float-right m-t-n-xs ml-1" style="width:64px" value="Lưu" />
+                                                @*<label> <input type="checkbox" class="i-checks"> Remember me </label>*@
+                                            </div>
+                                        </form>
+                                    </div>
+                                    @*<div class="col-sm-6">
+                                            <h4>Not a member?</h4>
+                                            <p>You can create an account:</p>
+                                            <p class="text-center">
+                                                <a href=""><i class="fa fa-sign-in big-icon"></i></a>
+                                            </p>
+                                        </div>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @*Thêm món mới*@
+                <div id="item-form" class="modal fade" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3 class="m-t-none m-b">Đồ uống</h3>
+                                        <form role="form">
+                                            <div class="form-group d-flex"><label style="width:150px">Tên món:</label> <input type="text" fieldName="ItemName" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                            <div class="form-group d-flex"><label style="width:150px">Đơn giá:</label> <input type="text" fieldName="UnitPrice" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                            <div class="form-group d-flex"><label style="width:150px">Đơn vị tính:</label> <input type="text" fieldName="UnitName" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0"></div>
+                                            <div class="form-group d-flex"><label style="width:150px">Chọn ảnh món:</label><input id="logo" type="file" multiple fieldName="File"></div>
+
+                                            <div>
+                                                <a class="btn btn-sm btn-danger float-right m-t-n-xs ml-1 closeBtn" data-dismiss="modal"><strong>Hủy bỏ</strong></a>
+                                                <input id="saveItem" class="btn btn-sm btn-primary float-right m-t-n-xs ml-1" style="width:64px" value="Lưu" />
+                                                @*<label> <input type="checkbox" class="i-checks"> Remember me </label>*@
+                                            </div>
+                                        </form>
+                                    </div>
+                                    @*<div class="col-sm-6">
+                                            <h4>Not a member?</h4>
+                                            <p>You can create an account:</p>
+                                            <p class="text-center">
+                                                <a href=""><i class="fa fa-sign-in big-icon"></i></a>
+                                            </p>
+                                        </div>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/Scripts/libraries/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/common/common.js"></script>
+<script src="~/Scripts/base/base.js"></script>
+<script src="~/Scripts/base/ajax.js"></script>
+<script type="text/javascript">
+    @*var listItem = @Html.Raw(Json.Encode(ViewBag.Data));*@
+    var listItem = @Json.Serialize(ViewBag.Data);
+</script>
+<script src="~/Scripts/views/Invoice/Order.js"></script>
+<script src="~/Scripts/views/Item/Item.js"></script>
+@*<img src="~/upload/40ae2522-b3e0-448a-b650-193178e1a872_IMG_1897.JPG" />*@

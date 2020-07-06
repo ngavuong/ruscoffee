@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewData["Title"] = "Quản lý món";
+}
+<link href="~/lib/jquery-ui/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+<div class="row wrapper border-bottom white-bg">
+    <div class="col-lg-10">
+        <h2>Danh sách món</h2>
+    </div>
+    <div class="col-lg-2 d-flex" style="align-items:center">
+        <a data-toggle="modal" class="btn btn-success" href="#item-form" id="create-item">Thêm món mới</a>
+        @*<a data-toggle="modal" href="#employee-form" class="btn btn-sm btn-primary float-right m-t-n-xs ml-2" id="create-employee">Thêm nhân viên</a>*@
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight" id="orderPage">
+    <div class="row search">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <div style="display:flex">
+                        <div class="form-group d-flex data_1">
+                            <label class="font-normal" style="width:100px">Tên món</label>
+                            <div class="input-group date">
+                                <input type="text" class="form-control" id="itemSearch">
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-primary m-t-n-xs ml-1" style="height:40px" id="reload">Tìm</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12" style="overflow:auto;" id="grdMenu">
+            <div class="row" id="grdItem">
+                @if (ViewBag.Data != null)
+                {
+                    @foreach (var item in ViewBag.Data)
+                    {
+                        <div class="col-lg-4" data-refID="abc">
+                            <div class="contact-box">
+                                <div class="row" @*href="@Url.Action("Profile", "AppViews")"*@>
+                                    <div class="col-12">
+                                        <div class="text-center">
+                                            <img alt="image" class="m-t-xs img-fluid" src="~/upload/@item.ImagePath" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 center w-100">
+                                        <h5><b>@item.ItemName</b></h5>
+                                        <h5>@item.UnitPrice</h5>
+                                        <button class="btn btn-sm btn-danger float-right m-t-n-xs ml-2 delete-item-btn" data-itemID=@item.ItemID><strong>Xóa</strong></button>
+                                        <a data-toggle="modal" class="btn btn-sm float-right m-t-n-xs btn btn-success ml-2 edit-item-btn" href="#item-form" data-itemID=@item.ItemID>Sửa</a>
+                                        @*<button class="btn btn-sm btn-primary float-right m-t-n-xs ml-2 btn-add-order" data-itemID=@item.ItemID><strong>Chọn</strong></button>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+
+        </div>
+
+        @*Thêm món mới*@
+        <div id="item-form" class="modal fade" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3 class="m-t-none m-b">Đồ uống</h3>
+                                <form role="form">
+                                    <div class="form-group d-flex"><label style="width:150px">Tên món:</label> <input type="text" fieldName="ItemName" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0" notEmpty></div>
+                                    <div class="form-group d-flex"><label style="width:150px">Đơn giá:</label> <input type="text" fieldName="UnitPrice" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0" notEmpty></div>
+                                    <div class="form-group d-flex"><label style="width:150px">Đơn vị tính:</label> <input type="text" fieldName="UnitName" class="form-control" style="border:none;border-bottom:1px dotted #c0c0c0" notEmpty></div>
+                                    <div class="form-group d-flex"><label style="width:150px">Chọn ảnh món:</label><input id="logo" type="file" multiple fieldName="File"></div>
+
+                                    <div>
+                                        <a class="btn btn-sm btn-danger float-right m-t-n-xs ml-1 closeBtn" data-dismiss="modal"><strong>Hủy bỏ</strong></a>
+                                        <input id="saveItem" class="btn btn-sm btn-primary float-right m-t-n-xs ml-1" style="width:64px" value="Lưu" />
+                                        @*<label> <input type="checkbox" class="i-checks"> Remember me </label>*@
+                                    </div>
+                                </form>
+                            </div>
+                            @*<div class="col-sm-6">
+                                    <h4>Not a member?</h4>
+                                    <p>You can create an account:</p>
+                                    <p class="text-center">
+                                        <a href=""><i class="fa fa-sign-in big-icon"></i></a>
+                                    </p>
+                                </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+
+}
+
+
+@section Scripts {
+
+    <script src="~/Scripts/libraries/jquery-3.4.1.min.js"></script>
+    <script src="~/lib/jquery-ui/jquery-ui.js"></script>
+    <script src="~/Scripts/base/base.js"></script>
+    <script src="~/Scripts/common/common.js"></script>
+    <script src="~/Scripts/base/ajax.js"></script>
+    <script type="text/javascript">
+    @*var listItem = @Html.Raw(Json.Encode(ViewBag.Data));*@
+    var listItem = @Json.Serialize(ViewBag.Data);
+    </script>
+    <script src="~/Scripts/views/Invoice/Order.js"></script>
+    <script src="~/Scripts/views/Item/Item.js"></script>
+}

@@ -1,0 +1,13 @@
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.BL.deps.json
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.BL.dll
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.BL.pdb
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.DL.dll
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.Entities.dll
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.DL.pdb
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.Entities.pdb
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.csprojAssemblyReference.cache
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.AssemblyInfoInputs.cache
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.AssemblyInfo.cs
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.csproj.CopyComplete
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.dll
+D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.pdb
