@@ -6,3 +6,12 @@ D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.Entities\obj\Debug\netcoreap
 D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.dll
 D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.pdb
 D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.csprojAssemblyReference.cache
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.Entities\bin\Debug\netcoreapp3.1\RusCoffee.Entities.deps.json
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.Entities\bin\Debug\netcoreapp3.1\RusCoffee.Entities.dll
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.Entities\bin\Debug\netcoreapp3.1\RusCoffee.Entities.pdb
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.csprojAssemblyReference.cache
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.AssemblyInfoInputs.cache
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.AssemblyInfo.cs
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.csproj.CoreCompileInputs.cache
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.dll
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.Entities\obj\Debug\netcoreapp3.1\RusCoffee.Entities.pdb

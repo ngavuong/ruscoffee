@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Net.NetworkInformation;
 using System.Text;
 
 namespace RusCoffee.DL
 {
     public class DBContext : IDisposable
     {
-        private string _connectionString = @"Data Source=51S4PERS4MWYWNI\SQLEXPRESS;Initial Catalog=RusCoffee;Integrated Security=True";
+        public static string _connectionString = string.Empty;
+        //private string _connectionString = @"Data Source=51S4PERS4MWYWNI\SQLEXPRESS;Initial Catalog=RusCoffee;Integrated Security=True";
         private SqlConnection _sqlConnection;
         private SqlCommand _sqlCommand;
         private SqlTransaction _sqlTransaction;

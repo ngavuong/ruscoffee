@@ -11,6 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RusCoffee.Entities", "RusCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RusCoffee", "RusCoffee\RusCoffee.csproj", "{16DF3F32-F559-4A28-9D7E-E80587D72892}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{05EA2367-5684-44A8-B2A8-125A23D723D9}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,23 +44,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31F760FB-C49A-4CB4-BA74-2D39BC4A8BB0}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://dev.azure.com/datn2020
-		SccProjectUniqueName0 = RusCoffee.BL\\RusCoffee.BL.csproj
-		SccProjectName0 = RusCoffee.BL
-		SccLocalPath0 = RusCoffee.BL
-		SccProjectUniqueName1 = RusCoffee.DL\\RusCoffee.DL.csproj
-		SccProjectName1 = RusCoffee.DL
-		SccLocalPath1 = RusCoffee.DL
-		SccProjectUniqueName2 = RusCoffee.Entities\\RusCoffee.Entities.csproj
-		SccProjectName2 = RusCoffee.Entities
-		SccLocalPath2 = RusCoffee.Entities
-		SccProjectUniqueName3 = RusCoffee\\RusCoffee.csproj
-		SccProjectName3 = RusCoffee
-		SccLocalPath3 = RusCoffee
-		SccLocalPath4 = .
 	EndGlobalSection
 EndGlobal

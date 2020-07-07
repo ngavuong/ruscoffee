@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "V//as0u7NDNn6p32BTdp89C+A635qO8Cbh+n8xXgIlroj4CDN1i0rgZWisy7JSxcnE4XoZgBrR7axlp30L19vw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nvmanh\\Desktop\\~Temp\\VTNGA\\ruscoffee-master\\RusCoffee.Entities\\RusCoffee.Entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nvmanh\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.3\\microsoft.aspnetcore.http.features.3.1.3.nupkg.sha512",
+    "C:\\Users\\nvmanh\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.3\\microsoft.extensions.primitives.3.1.3.nupkg.sha512",
+    "C:\\Users\\nvmanh\\.nuget\\packages\\system.io.pipelines\\4.7.1\\system.io.pipelines.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

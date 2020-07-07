@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RusCoffee\\ASPNET_Core_2_1_Full_Project\\RusCoffee.DL\\RusCoffee.DL.csproj": {}
+    "C:\\Users\\nvmanh\\Desktop\\~Temp\\VTNGA\\ruscoffee-master\\RusCoffee.DL\\RusCoffee.DL.csproj": {}
   },
   "projects": {
-    "D:\\RusCoffee\\ASPNET_Core_2_1_Full_Project\\RusCoffee.DL\\RusCoffee.DL.csproj": {
+    "C:\\Users\\nvmanh\\Desktop\\~Temp\\VTNGA\\ruscoffee-master\\RusCoffee.DL\\RusCoffee.DL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RusCoffee\\ASPNET_Core_2_1_Full_Project\\RusCoffee.DL\\RusCoffee.DL.csproj",
+        "projectUniqueName": "C:\\Users\\nvmanh\\Desktop\\~Temp\\VTNGA\\ruscoffee-master\\RusCoffee.DL\\RusCoffee.DL.csproj",
         "projectName": "RusCoffee.DL",
-        "projectPath": "D:\\RusCoffee\\ASPNET_Core_2_1_Full_Project\\RusCoffee.DL\\RusCoffee.DL.csproj",
-        "packagesPath": "C:\\Users\\Microsoft Windows\\.nuget\\packages\\",
-        "outputPath": "D:\\RusCoffee\\ASPNET_Core_2_1_Full_Project\\RusCoffee.DL\\obj\\",
+        "projectPath": "C:\\Users\\nvmanh\\Desktop\\~Temp\\VTNGA\\ruscoffee-master\\RusCoffee.DL\\RusCoffee.DL.csproj",
+        "packagesPath": "C:\\Users\\nvmanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nvmanh\\Desktop\\~Temp\\VTNGA\\ruscoffee-master\\RusCoffee.DL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Microsoft Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nvmanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\RusCoffee\\ASPNET_Core_2_1_Full_Project\\RusCoffee.Entities\\RusCoffee.Entities.csproj": {
-                "projectPath": "D:\\RusCoffee\\ASPNET_Core_2_1_Full_Project\\RusCoffee.Entities\\RusCoffee.Entities.csproj"
+              "C:\\Users\\nvmanh\\Desktop\\~Temp\\VTNGA\\ruscoffee-master\\RusCoffee.Entities\\RusCoffee.Entities.csproj": {
+                "projectPath": "C:\\Users\\nvmanh\\Desktop\\~Temp\\VTNGA\\ruscoffee-master\\RusCoffee.Entities\\RusCoffee.Entities.csproj"
               }
             }
           }
@@ -69,24 +66,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\RusCoffee\\ASPNET_Core_2_1_Full_Project\\RusCoffee.Entities\\RusCoffee.Entities.csproj": {
+    "C:\\Users\\nvmanh\\Desktop\\~Temp\\VTNGA\\ruscoffee-master\\RusCoffee.Entities\\RusCoffee.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RusCoffee\\ASPNET_Core_2_1_Full_Project\\RusCoffee.Entities\\RusCoffee.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\nvmanh\\Desktop\\~Temp\\VTNGA\\ruscoffee-master\\RusCoffee.Entities\\RusCoffee.Entities.csproj",
         "projectName": "RusCoffee.Entities",
-        "projectPath": "D:\\RusCoffee\\ASPNET_Core_2_1_Full_Project\\RusCoffee.Entities\\RusCoffee.Entities.csproj",
-        "packagesPath": "C:\\Users\\Microsoft Windows\\.nuget\\packages\\",
-        "outputPath": "D:\\RusCoffee\\ASPNET_Core_2_1_Full_Project\\RusCoffee.Entities\\obj\\",
+        "projectPath": "C:\\Users\\nvmanh\\Desktop\\~Temp\\VTNGA\\ruscoffee-master\\RusCoffee.Entities\\RusCoffee.Entities.csproj",
+        "packagesPath": "C:\\Users\\nvmanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nvmanh\\Desktop\\~Temp\\VTNGA\\ruscoffee-master\\RusCoffee.Entities\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Microsoft Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nvmanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,7 +124,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

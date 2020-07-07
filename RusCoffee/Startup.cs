@@ -15,6 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json.Serialization;
+using RusCoffee.DL;
 using RusCoffee.Helpers;
 using RusCoffee.Services;
 
@@ -32,6 +33,7 @@ namespace RusCoffee
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            DBContext._connectionString = Configuration.GetConnectionString("RusConnection");
             services.AddSession(options => {
                 options.IdleTimeout = TimeSpan.FromMinutes(60); 
                 //options.Cookie.HttpOnly = true;

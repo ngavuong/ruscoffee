@@ -11,3 +11,17 @@ D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\obj\Debug\netcoreapp3.1\R
 D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.csproj.CopyComplete
 D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.dll
 D:\RusCoffee\ASPNET_Core_2_1_Full_Project\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.pdb
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.BL.deps.json
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.BL.dll
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.BL.pdb
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.DL.dll
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.Entities.dll
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.DL.pdb
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\bin\Debug\netcoreapp3.1\RusCoffee.Entities.pdb
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.csprojAssemblyReference.cache
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.AssemblyInfoInputs.cache
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.AssemblyInfo.cs
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.csproj.CoreCompileInputs.cache
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.csproj.CopyComplete
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.dll
+C:\Users\nvmanh\Desktop\~Temp\VTNGA\ruscoffee-master\RusCoffee.BL\obj\Debug\netcoreapp3.1\RusCoffee.BL.pdb
