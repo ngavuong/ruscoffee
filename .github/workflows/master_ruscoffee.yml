@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@master
@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'ruscoffee'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_8d6806029a1a40319ec2410b97d254e3 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_12a82b3afa844bc7bf0dbcc813d6a145 }}
         package: ${{env.DOTNET_ROOT}}/myapp 
